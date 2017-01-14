@@ -24,7 +24,7 @@ def main():
     dataTrain, dataTest, targetTrain, targetTest = train_test_split(iris.data, iris.target, test_size=0.30)
 
     # Train the program
-    print(myClassifier.fit(dataTrain))
+    print(myClassifier.fit(dataTrain, targetTest))
 
     # Send the test data and get a prediction
     myClassifier.predict(dataTest)
