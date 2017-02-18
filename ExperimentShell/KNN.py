@@ -81,8 +81,6 @@ class KNN(object):
                 # Reinitialize distance to 0
                 distance = 0
 
-
-
     #
     #
     def calcAccuracy(self, targetTest):
