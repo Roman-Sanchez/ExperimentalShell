@@ -28,10 +28,16 @@ def prompt():
 
 
 def startNNetwork():
+    iris = datasets.load_iris()
+    dataTrain, dataTest, targetTrain, targetTest = train_test_split(iris.data, iris.target, test_size=0.3)
 
     NNetworkClassifier = NeuralNetwork([2, 4, 2], 4, 0.1, 3)
     NNetworkClassifier.build_layers()
+
+    NNetworkClassifier.fit(dataTrain, targetTrain)
+
     print("Built layers")
+
 
 def startKNN():
 
